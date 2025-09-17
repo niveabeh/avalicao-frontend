@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-esquerdo">
+            <form action="" id="formulario">
+                <fieldset>
+                    <legend>web interativa</legend>
+                    <label for="numero">Numero</label>
+                    <input type="text" name="numero" id="numero" placeholder="Informe um número inteiro" required>
+                    <p id="alertainput"></p>
+                    <button class="btn enviar" type="submit" id="btn">Enviar</button>
+                    <button class="btn limpar" type="reset">Limpar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container-direito">
+            <div class="container-direito-filho">
+                <div class="caixa" id="caixa">
+                    <p class="numIn">Número Informado</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="caixa" id="caixa">
+                    <p class="numIn">Rank Número</p>
+                    <p class="rank">1º - <span id="primeiroLugar"></span></p>
+                    <p class="rank">2º - <span id="segundoLugar"></span></p>
+                    <p class="rank">3º - <span id="terceiroLugar"></span></p>
+                </div>
+            </div>
+            <div class="caixa-info">
+                <p>Informações</p>
+                <p> qdd numeros: <span id="qddNum"></span></p>
+                <p> menor Número: <span id="menorNumero"></span></p>
+                <p> Maior Número: <span id="maiorNumero"></span></p>
+                <p> soma: <span id="soma"></span></p>
+                <p> média: <span id="media"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabela">
+        <table class="tabelaProdutos">
+            <thead>
+                <tr>
+                    <th colspan="5" class="tituloTabela">Matriz</th>
+                </tr>
+                <tr>
+                    <th>coluna A</th>
+                    <th>Coluna B</th>
+                    
+                </tr>
+                
+             
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="celulaA"></td>
+                    <td id="celulaAB"></td>
+                    
+                </tr>
+                <tr>
+                    <td id="celulaBA"></td>
+                    <td  id="celulaBB"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
