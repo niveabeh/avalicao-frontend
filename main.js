@@ -15,40 +15,52 @@ let matriz = [];
 
 const regexnumero = /^\d+$/;
 
-console.log(numero)
+
 btn.addEventListener("click", (e) => {
+
     e.preventDefault();
+
     const valorNumero = numero.value;
+
     if (numero.value == "") {
+        
         alertainput.innerText = 'Erro: campo vazio!';
+
     } else if (!regexnumero.test(numero.value)) {
+
         alertainput.innerText = 'Somente números inteiros';
         return false;
+
+
     } else {
         if (valorNumero !== "") {
-            // vetorNumero = numero.value;
+
+            alertainput.innerText = "";
+            
+            vetorNumero.push(parseInt(numero.value));
+            console.log(vetorNumero);
+
+
             let li = document.createElement("li");
+
             li.innerText = valorNumero;
+
             let btnRemover = document.createElement("button");
+
             btnRemover.innerText = "❌";
+
             btnRemover.style.marginLeft = "10px";
             btnRemover.style.cursor = "pointer";
             btnRemover.style.borderradius = "8px";
             btnRemover.style.border = "none";
+
             btnRemover.addEventListener("click", () => {
                 lista.removeChild(li);
             });
+
             li.appendChild(btnRemover);
             lista.appendChild(li);
             lista.value = "";
-
-
-
-            vetorNumero.push( parseInt(numero.value) );
-            console.log(vetorNumero.length);
-
-
-            // fazer depois
 
             let guardarnumero;
             let primeiroLugar = document.getElementById("primeiroLugar");
@@ -98,6 +110,7 @@ btn.addEventListener("click", (e) => {
 
             }
             // soma
+        
             for (let i = 0; i < vetorNumero.length; i++) {
 
                 if (vetorNumero[i - 1] > vetorNumero[i]) {
