@@ -24,6 +24,7 @@ btn.addEventListener("click", (e) => {
 
     if (numero.value == "") {
         
+        
         alertainput.innerText = 'Erro: campo vazio!';
 
     } else if (!regexnumero.test(numero.value)) {
