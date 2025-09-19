@@ -6,40 +6,33 @@
 let formulario = document.getElementById("formulario");
 let numero = document.getElementById("numero");
 let alertainput = document.getElementById("alertainput");
-let lista = document.querySelector("ul");
 let btn = document.getElementById("btn");
+let lista = document.querySelector("ul");
 
 let vetorNumero = [];
 let matriz = [];
-
-
 const regexnumero = /^\d+$/;
 
 
 btn.addEventListener("click", (e) => {
 
     e.preventDefault();
-
+    
     const valorNumero = numero.value;
 
     if (numero.value == "") {
         
         alertainput.innerText = 'Erro: campo vazio!';
 
-    } else if (!regexnumero.test(numero.value)) {
-
+    } else if (!regexnumero.test(valorNumero)) {
         alertainput.innerText = 'Somente números inteiros';
-        return false;
-
 
     } else {
         if (valorNumero !== "") {
 
-            alertainput.innerText = "";
-            
-            vetorNumero.push(parseInt(numero.value));
-            console.log(vetorNumero);
+            alertainput.innerText = "";  
 
+            vetorNumero.push(parseInt(valorNumero));
 
             let li = document.createElement("li");
 
@@ -65,8 +58,8 @@ btn.addEventListener("click", (e) => {
             let guardarnumero;
             let primeiroLugar = document.getElementById("primeiroLugar");
             let contadorNumero = 0;
-
-
+            
+            
             for(let i = 0; i < vetorNumero.length; i++){
 
                 if(vetorNumero[i] > vetorNumero [i-1]){

@@ -20,6 +20,10 @@ section{
 }
 .container-direito{
     flex-direction: column;
+    padding: 4%;
+}
+form{
+    width: 60%;
 }
 fieldset{
     border: none;
@@ -48,12 +52,13 @@ input{
     margin-bottom: 8px;
 }
 .btn{
-    padding: 1rem 1.5rem;
+    padding: 16px 20px;
     border-radius: 1.5rem;
     border: none;
     margin-bottom: 8px;
     color: #fff;
     font-size: 1rem;
+    font-weight: bold;
 }
 .enviar{
     background-color: #03a3ff;
